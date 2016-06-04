@@ -21,7 +21,7 @@ class DeployController extends Controller
             return response()->json(array('success'=>$OK));
         }
         else{
-            return App::abort(404);
+            return \App::abort(404);
         }
     }
 

@@ -10,10 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::post('/deploy', 'DeployController@deploy'); // Deploy
 
-Route::group(['middleware' => ['web']], function(){
+Route::group(['middleware' => 'web'], function(){
 
     Route::get('/', 'PageController@index');
 
