@@ -13,10 +13,12 @@
 
 Route::post('/deploy', 'DeployController@deploy'); // Deploy
 
+Route::group(['middleware' => ['web']], function(){
 
-Route::get('/', 'PageController@index');
+    Route::get('/', 'PageController@index');
 
-Route::get('/next-talk', 'PageController@next_talk');
+    Route::get('/next-talk', 'PageController@next_talk');
 
-Route::get('/forum', 'PageController@forum');
+    Route::get('/forum', 'PageController@forum');
+});
 
