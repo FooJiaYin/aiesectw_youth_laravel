@@ -39,6 +39,7 @@
             </div>
         </div>
     </section>
+    <hr />
     <!-- Tab Section Section -->
     <section class="ptb ptb-sm-60">
         <div class="container">
@@ -114,31 +115,39 @@
                             </div>
                             <div id="tabs-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">How tough is Kick Dummy? Will it split?</h6>
+                                    <h6 class="accordion-title">第二天開幕演說｜實踐、創新精神</h6>
                                     <div class="accordion-content defualt-hidden" style="display: none;">
                                         <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">Will the Kick Dummy fall over?</h6>
+                                    <h6 class="accordion-title">未來永續創新實驗室Part 2｜</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">Do I need a pump to inflate Kick Dummy?</h6>
+                                    <h6 class="accordion-title">成果展現｜</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
                                         <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.</p>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">How can I store away Kick Dummy?</h6>
+                                    <h6 class="accordion-title">四大企業對談｜</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
                                         <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.</p>
                                     </div>
                                 </div>
+                                <div class="accordion-section">
+                                    <h6 class="accordion-title">閉幕論壇｜未來世界，青年創造</h6>
+                                    <div class="accordion-content defualt-hidden" style="">
+                                        <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
+                                        <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.</p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -147,7 +156,114 @@
             </div>
         </div>
     </section>
-
+    <hr />
+    <section class="wow fadeIn ptb ptb-60">
+        <div class="container text-center animated" style="visibility: visible; animation-name: fadeInLeft;">
+            <div class="page-icon-top">
+                <i class="ion ion-mic-c"></i>
+            </div>
+            <h3>主持人及講者</h3>
+            <div class="spacer-60"></div>
+            <div class="owl-carousel speech-carousel nf-carousel-theme">
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/people-1.jpg" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>Mitchell KAPPOS</h5>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>Mitchell KAPPOS</h5>
+                            <p class="">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/people-2.jpg" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>Leonardo da Vinci</h5>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>Leonardo da Vinci</h5>
+                            <p class="">Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/people-3.jpg" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>John Doe</h5>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>John Doe</h5>
+                            <p class="">Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/people-4.jpg" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>Michael Lee</h5>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>Michael Lee</h5>
+                            <p class="">Photographer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 @endsection
 
