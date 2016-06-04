@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/deploy', 'DeployController@deploy'); // Deploy
+
+
+Route::get('/', 'PageController@index');
+
+Route::get('/next-talk', 'PageController@next_talk');
+
+Route::get('/forum', 'PageController@forum');
+
