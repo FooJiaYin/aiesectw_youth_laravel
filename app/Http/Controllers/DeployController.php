@@ -27,7 +27,7 @@ class DeployController extends Controller
 
     private function doexec($data){
         if( file_exists($data['LOCAL_REPO']) ) {
-            return shell_exec("cd {$data['LOCAL_REPO']} && git pull origin {$data['BRANCH']} && git submodule update");
+            return shell_exec("cd {$data['LOCAL_REPO']} && git pull origin {$data['BRANCH']}");
         } else {
             return shell_exec("cd {$data['LOCAL_ROOT']} && git clone {$data['REMOTE_REPO']} && composer install");
         }
