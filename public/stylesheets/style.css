@@ -3961,9 +3961,9 @@ header.sticky .navigation a.current-ele {
   margin-bottom: 0px;
   padding-bottom: 1px;
   background: #fff;
-  border-top: 1px solid #222222;
-  border-left: 1px solid #222222;
-  border-right: 1px solid #222222;
+  border-top: 3px solid #222222;
+  border-left: none;
+  border-right: none;
   border-bottom: none;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
