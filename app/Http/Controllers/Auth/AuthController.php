@@ -28,7 +28,15 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+
+    protected $redirectTo = '/admin';
+
+    protected $redirectAfterLogout = '/login';
+
+    protected $maxLoginAttempts = 5; // Amount of bad attempts user can make
+
+    protected $lockoutTime = 300; // Time for which user is going to be blocked in seconds
+
 
     /**
      * Create a new authentication controller instance.
@@ -37,7 +45,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        $this->middleware($this->guestMiddleware(), ['except' => ['logout', 'register', 'showRegistrationForm']]);
     }
 
     /**
