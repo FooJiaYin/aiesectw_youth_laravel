@@ -6,7 +6,6 @@ use Spatie\Analytics\Analytics;
 use Spatie\Analytics\AnalyticsClient;
 use Spatie\Analytics\Period;
 use Jenssegers\Date\Date;
-use Ixudra\Curl\Facades\Curl;
 // 輔助
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
@@ -97,7 +96,7 @@ class AnalyticsService extends Analytics {
         $analyticsEndDate = Carbon::today()->format('Y-m-d'); // 今天
         // Clicky api 請求昨天跟今天每小時活動數
         $api_url = "https://api.clicky.com/api/stats/4?site_id=100967232&sitekey=1da9862848de607c&type=actions&hourly=1&date={$analyticsStartDate},{$analyticsEndDate}&output=json";
-        $response = json_decode(Curl::to($api_url)->get());
+        $response = json_decode(\Curl::to($api_url)->get());
         $collection = collect([]);
         foreach($response[0]->dates as $dateData){
             $date = Carbon::createFromFormat('Y-m-d', $dateData->date)->isToday() ? 'today' : 'yesterday'; // 判斷日期是昨天還是今天
