@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'youthspeaktw@gmail.com', 'name' => 'Youth Speak Admin'],
 
     /*
     |--------------------------------------------------------------------------

@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Taipei',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh_TW',
 
     /*
     |--------------------------------------------------------------------------
@@ -155,6 +155,20 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        //Abel PhpStorm IDE Helper 開發完可刪，使用 php artisan ide-helper:generate
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        /**
+         * Google Analytics
+         */
+        Spatie\Analytics\AnalyticsServiceProvider::class,
+        /**
+         * Localize Carbon
+         */
+        Jenssegers\Date\DateServiceProvider::class,
+        /**
+         * Laravel Curl Tool
+         */
+        Ixudra\Curl\CurlServiceProvider::class,
 
     ],
 
@@ -201,6 +215,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'GA' => Spatie\Analytics\AnalyticsFacade::class,
+        'Date' => Jenssegers\Date\Date::class,
+        'Curl' => Ixudra\Curl\Facades\Curl::class,
+        'Carbon' => Carbon\Carbon::class,
 
     ],
 
