@@ -22,8 +22,7 @@
                 </div>
                 <h3 class="h4">主題與介紹</h3>
                 <h4>最後世代 大哉問｜第九屆青年影響力前導巡迴論壇</h4>
-            </div>
-            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="spacer-15"></div>
                 <p>
                     未來世界最重要的趨勢：永續<br/>
                     從商業模式、 生活習慣到科技發展<br/>
