@@ -22,8 +22,8 @@
                         <div class="container caption-hero light-color">
                             <div class="inner-caption">
 
-                                <h2 class="h2">Welcome to Mazel</h2>
-                                <p class="lead">We carry a passion for performance marketing</p>
+                                <h2 class="h2">Youth Speak 青年影響力</h2>
+                                <p class="lead"></p>
 
                             </div>
                         </div>
@@ -34,10 +34,10 @@
                     <div class="overlay-hero overlay-dark">
                         <div class="container caption-hero light-color">
                             <div class="inner-caption">
-                                <h2 class="h2">Flexible & Customizable</h2>
-                                <p class="lead">We carry a passion for performance marketing</p>
+                                <h2 class="h2"></h2>
+                                <p class="lead"></p>
                                 <br />
-                                <div><a class="btn btn-md btn-white-line xs-hidden">Read More</a><span class="btn-space-10 xs-hidden"></span><a class="btn btn-md btn-white">Learn More</a></div>
+                                {{--<div><a class="btn btn-md btn-white-line xs-hidden">Read More</a><span class="btn-space-10 xs-hidden"></span><a class="btn btn-md btn-white"></a></div>--}}
                             </div>
                         </div>
                     </div>
@@ -48,10 +48,10 @@
                     <div class="overlay-hero overlay-dark">
                         <div class="container caption-hero light-color">
                             <div class="inner-caption">
-                                <h2 class="h2">One & Mutlipage Theme</h2>
-                                <p class="lead">We carry a passion for performance marketing</p>
+                                <h2 class="h2"></h2>
+                                <p class="lead"></p>
                                 <br />
-                                <div><a class="btn btn-md btn-black-line">Read More</a><span class="btn-space-10 xs-hidden"></span><a class="btn btn-md btn-black xs-hidden">Read More</a></div>
+                                {{--<div><a class="btn btn-md btn-black-line"></a><span class="btn-space-10 xs-hidden"></span><a class="btn btn-md btn-black xs-hidden"></a></div>--}}
                             </div>
                         </div>
                     </div>
@@ -62,8 +62,8 @@
                     <div class="overlay-hero overlay-dark">
                         <div class="container caption-hero light-color">
                             <div class="inner-caption">
-                                <h2 class="h2">Fully Responsive</h2>
-                                <p class="lead">We carry a passion for performance marketing</p>
+                                <h2 class="h2"></h2>
+                                <p class="lead"></p>
                             </div>
                         </div>
                     </div>
