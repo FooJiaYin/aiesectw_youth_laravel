@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\YouthSpeak\User\Entities;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
