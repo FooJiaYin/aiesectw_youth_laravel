@@ -122,7 +122,7 @@
                 { y: '2015', a: 90, b: 60, c:30 }
             ];
         var $areaData = $('#morris-hourly-actions').data('chart');
-        this.createAreaChart('morris-hourly-actions', 0, 0, $areaData, 'hour', ['yesterday', 'today'], ['昨天', '今天'], ["#f9cd48", "#64b5f6","#dcdcdc"], false);
+        this.createAreaChart('morris-hourly-actions', 0, 0, $areaData, 'hour', ['today', 'yesterday'], ['今天', '昨天'], ["#64b5f6", "#f9cd48", "#dcdcdc"], false);
 
         //creating area chart with dotted
         //var $areaDotData = [
