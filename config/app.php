@@ -147,6 +147,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        App\YouthSpeak\Core\Providers\ViewComposerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -169,6 +170,10 @@ return [
          * Laravel Curl Tool
          */
         Ixudra\Curl\CurlServiceProvider::class,
+        /**
+         * HTML & FORM HELPER
+         */
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -219,6 +224,8 @@ return [
         'Date' => Jenssegers\Date\Date::class,
         'Curl' => Ixudra\Curl\Facades\Curl::class,
         'Carbon' => Carbon\Carbon::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class
 
     ],
 
