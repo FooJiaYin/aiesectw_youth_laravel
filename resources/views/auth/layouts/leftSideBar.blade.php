@@ -7,18 +7,18 @@
                 <li class="text-muted menu-title">{{ trans('menu.main') }}</li>
 
                 <li>
-                    <a href="{{ url('/admin') }}" class="waves-effect waves-primary subdrop">
+                    <a href="{{ url('/admin') }}" class="waves-effect waves-primary{{ Request::is('admin') ? ' active' : '' }}">
                         <i class="zmdi zmdi-view-dashboard"></i><span> {{ trans('menu.dashboard') }}<i>Dashboard</i> </span>
                     </a>
                 </li>
 
                 <li class="has_sub">
-                    <a class="waves-effect waves-primary">
+                    <a class="waves-effect waves-primary{{ Request::is('admin/press*') ? ' active' : '' }}">
                         <i class="fa fa-newspaper-o"></i> <span> {{ trans('menu.press') }}<i>Press</i> </span>
                     </a>
                     <ul class="list-unstyled">
-                        <li><a href=""><i class="zmdi zmdi-view-list"></i> {{ trans('menu.press-list') }}</a></li>
-                        <li><a href=""><i class="zmdi zmdi-edit"></i> {{ trans('menu.press-new') }}</a></li>
+                        <li class="{{ Request::is('admin/press') ? 'active' : '' }}"><a href="{{ url('/admin/press') }}"><i class="zmdi zmdi-view-list"></i> {{ trans('menu.press-list') }}</a></li>
+                        <li class="{{ Request::is('admin/press/create') ? 'active' : '' }}"><a href="{{ url('/admin/press/create') }}"><i class="zmdi zmdi-edit"></i> {{ trans('menu.press-new') }}</a></li>
                     </ul>
                 </li>
 
@@ -146,7 +146,7 @@
     <div class="user-detail">
         <div class="dropup">
             <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img
-                        src="/auth/images/users/avatar-2.jpg" alt="user-img" class="img-circle"> </a>
+                        src="/img/favicon.png" alt="user-img" class="img-circle"> </a>
             <ul class="dropdown-menu">
                 <li><a href="javascript:void(0)"><i class="zmdi zmdi-face"></i> Profile</a></li>
                 <li><a href="javascript:void(0)"><i class="zmdi zmdi-settings"></i> Settings</a></li>

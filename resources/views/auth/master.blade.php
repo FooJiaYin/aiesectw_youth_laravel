@@ -76,6 +76,8 @@
 <script src="/auth/plugins/notifyjs/dist/notify.min.js"></script>
 <script src="/auth/plugins/notifications/notify-metro.js"></script>
 <script src="/auth/js/jquery.core.js"></script>
+<!-- Custom main Js -->
+<script src="/auth/js/jquery.app.js"></script>
 
 @yield('footerjs')
     <script>

@@ -232,8 +232,7 @@
 <!-- Page js  -->
 {{--<script src="/auth/pages/jquery.dashboard.js"></script>--}}
 
-<!-- Custom main Js -->
-<script src="/auth/js/jquery.app.js"></script>
+
 
 
 <script type="text/javascript">
