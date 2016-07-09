@@ -56,7 +56,9 @@ Route::group(['middleware' => ['web','auth']], function(){
         Route::get('/press/{id}/edit', 'Auth\PressController@edit');
         Route::put('/press/{id}', 'Auth\PressController@update');
         Route::delete('/press/{id}', 'Auth\PressController@destroy');
-
+        //
+        Route::get('/upload', 'Auth\PhotoController@showDialog');
+        Route::post('/upload', 'Auth\PhotoController@imageUpload');
 
 
 
