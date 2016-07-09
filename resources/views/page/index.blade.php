@@ -6,9 +6,9 @@
         <!-- Intro Scroll Down -->
         <div class="intro-scroll-down">
             <a class="scroll-down" href="#about">
-                        <span class="mouse">
-                            <span class="mouse-dot"></span>
-                        </span>
+                <span class="mouse">
+                    <span class="mouse-dot"></span>
+                </span>
             </a>
         </div>
         <!-- End Intro Scroll Down -->
@@ -21,10 +21,8 @@
                     <div class="overlay-hero overlay-dark">
                         <div class="container caption-hero light-color">
                             <div class="inner-caption">
-
                                 <h2 class="h2">Youth Speak 青年影響力</h2>
                                 <p class="lead"></p>
-
                             </div>
                         </div>
                     </div>
@@ -199,54 +197,29 @@
     <section id="blog" class="wow fadeIn ptb ptb-sm-80">
         <div class="container">
             <h3 class="float-left float-none-xs">新聞中心</h3>
-            <a class="btn-link-a float-right float-none-xs h5">看更多消息</a>
+            @if($presses->count())<a href="{{ action('PressController@index') }}" class="btn-link-a float-right float-none-xs h5">看更多消息</a>@endif
             <div class="clearfix"></div>
             <div class="spacer-60"></div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30">
-                    <div class="blog-post">
-                        <div class="post-media">
-                            <img class="item-container" src="img/full/20.jpg" alt="" />
-                        </div>
-                        <div class="post-meta"><span>by <a>John Doe</a>,</span> <span>Mar 16, 2015</span></div>
-                        <div class="post-header">
-                            <h5><a href="">Maecenas nec odio ante varcy</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30">
-                    <div class="blog-post">
-                        <div class="post-media">
-                            <div class="owl-carousel item1-carousel nf-carousel-theme">
-                                <div class="item">
-                                    <img src="img/full/26.jpg" alt="" />
-                                </div>
-                                <div class="item">
-                                    <img src="img/full/04.jpg" alt="" />
-                                </div>
-                                <div class="item">
-                                    <img src="img/full/27.jpg" alt="" />
-                                </div>
+                @forelse($presses as $press)
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30">
+                        <div class="blog-post">
+                            <div class="post-media">
+                                <img class="item-container" src="{{ $press->photo->path or '' }}" alt="" />
+                            </div>
+                            <div class="post-meta"><span>{{ $press->publish_time->format('Y/m/d') }}</span></div>
+                            <div class="post-header">
+                                <h5><a href="{{ action('PressController@show', ['id' => $press->id]) }}">{{ $press->title }}</a></h5>
                             </div>
                         </div>
-                        <div class="post-meta"><span>by <a>John Doe</a>,</span> <span>Feb 24, 2015</span></div>
-                        <div class="post-header">
-                            <h5><a href="">onec pede justo, fringilla vel</a></h5>
-                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30">
-                    <div class="blog-post">
-                        <div class="post-media">
-                            <img class="item-container" src="img/full/20.jpg" alt="" />
-                        </div>
-                        <div class="post-meta"><span>by <a>John Doe</a>,</span> <span>Jan 29, 2015</span></div>
-                        <div class="post-header">
-                            <h5><a href="">Augue velit cursus nunc</a></h5>
-                        </div>
+                @empty
+                    <div class="blog-post col-md-6 col-md-offset-3 mb-30 text-center">
+                        <blockquote>
+                            尚無新聞.
+                        </blockquote>
                     </div>
-                </div>
-
+                @endforelse
             </div>
         </div>
     </section>

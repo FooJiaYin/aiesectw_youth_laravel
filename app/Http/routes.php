@@ -35,6 +35,9 @@ Route::group(['middleware' => 'web'], function(){
 
     Route::get('/forum', 'PageController@forum');
 
+    Route::get('/press', 'PressController@index');
+    Route::get('/press/{id}', 'PressController@show');
+
 
 });
 
