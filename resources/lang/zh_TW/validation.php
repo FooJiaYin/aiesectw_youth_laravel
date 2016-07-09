@@ -135,6 +135,12 @@ return [
         'title'                 => '標題',
         'username'              => '使用者名',
         'year'                  => '年',
+        /**
+         * Customize
+         */
+        'category_id'           => '分類',
+        'photo_id'              => '封面照片',
+        'status'                => '狀態',
     ],
 
 ];
