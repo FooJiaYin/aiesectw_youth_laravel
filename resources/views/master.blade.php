@@ -14,13 +14,13 @@
     <link rel="apple-touch-icon" href="img/favicon.png">
     <!-- CSS -->
     <!-- build:css -->
+    <link href="/stylesheets/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/ionicons.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/jPushMenu.css" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/animate.css" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
     <!-- endbuild -->
     @yield('header')
 
@@ -58,9 +58,9 @@
             <!-- logo -->
             <div class="logo">
                 <a href="home.html">
-                    <img class="l-black" src="img/youthspeak_black.png" />
-                    <img class="l-white" src="img/youthspeak_white.png" />
-                    <img class="l-color" src="img/youthspeak_orange.png" />
+                    <img class="l-black" src="/img/youthspeak_black.png" />
+                    <img class="l-white" src="/img/youthspeak_white.png" />
+                    <img class="l-color" src="/img/youthspeak_orange.png" />
                 </a>
             </div>
             <!-- Navigation Menu -->
@@ -68,7 +68,7 @@
                 <ul>
                     <li><a href="/">首頁</a></li>
                     <li><a class="tipped" data-title="尚未開放" data-tipper-options='{"direction":"bottom"}'>關於計畫</a></li>
-                    <li><a class="tipped" data-title="尚未開放" data-tipper-options='{"direction":"bottom"}'>新聞中心</a></li>
+                    <li><a href="/press" class="tipped" data-title="尚未開放" data-tipper-options='{"direction":"bottom"}'>新聞中心</a></li>
                     <li><a class="tipped" data-title="尚未開放" data-tipper-options='{"direction":"bottom"}'>大調查與報告</a></li>
                     <li><a href="/forum">青年影響力論壇</a></li>
                     <li><a href="/next-talk">青年未來大講堂</a></li>
@@ -94,19 +94,10 @@
                 </div>
                 <!-- Logo -->
 
-                <!-- Newsletter -->
-                <div class="col-md-4 col-sm-5 col-xs-12 mb-xs-30">
-                    <div class="newsletter">
-                        <form>
-                            <input type="email" class="newsletter-input input-md newsletter-input mb-0" placeholder="輸入您的Email">
-                            <button class="newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <!-- End Newsletter -->
+
 
                 <!-- Social -->
-                <div class="col-md-3 col-md-offset-2 col-sm-4 col-xs-12">
+                <div class="col-md-3 col-md-offset-6 col-sm-4 col-xs-12">
                     <ul class="social">
                         <li><a target="_blank" href="https://www.facebook.com/AIESECYSF/"><i class="fa fa-facebook"></i></a></li>
                         <li><a target="_blank" href="https://twitter.com/AIESEC"><i class="fa fa-twitter"></i></a></li>
