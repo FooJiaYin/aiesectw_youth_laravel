@@ -2319,6 +2319,7 @@ p {
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 1px;
+  margin: 0px 0 10px 0;
   color: #555555;
   padding-bottom: 1px;
 }
