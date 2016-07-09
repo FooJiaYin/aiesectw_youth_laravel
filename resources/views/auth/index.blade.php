@@ -1,4 +1,5 @@
 @extends('auth.master')
+@section('title', '控制台｜Youth Speak 後台管理系統')
 @section('header')
     <!--Morris Chart CSS -->
     <link href="/auth/plugins/morris/morris.css" rel="stylesheet">
@@ -21,8 +22,8 @@
                 <div class="col-sm-12">
                     <div class="page-title-box">
                         <ol class="breadcrumb pull-right">
-                            <li><a href="/">Youth Speak</a></li>
-                            <li class="active">Dashboard</li>
+                            <li><a href="{{ url('/admin') }}">{{ trans('menu.youth-speak') }}</a></li>
+                            <li class="active">{{ trans('menu.dashboard') }}</li>
                         </ol>
                         <h4 class="page-title">{{ trans('dashboard.welcome').Auth::user()->name }} ！</h4>
                     </div>

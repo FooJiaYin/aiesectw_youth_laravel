@@ -8,7 +8,7 @@
 
     <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-    <title>後台管理系統｜Youth Speak</title>
+    <title>@yield('title')</title>
 
     @yield('header')
 
