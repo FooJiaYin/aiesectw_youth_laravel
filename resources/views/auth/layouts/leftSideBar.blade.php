@@ -22,6 +22,12 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a href="{{ url('admin/gallery') }}" class="waves-effect waves-primary{{ Request::is('/admin/gallery') ? ' active' : '' }}">
+                        <i class="zmdi zmdi-collection-folder-image"></i><span> {{ trans('menu.gallery') }}<i>Gallery</i> </span>
+                    </a>
+                </li>
+
                 {{--<li class="has_sub">--}}
                     {{--<a href="#" class="waves-effect waves-primary"><i--}}
                                 {{--class="zmdi zmdi-invert-colors"></i><span> Components </span> <span--}}
