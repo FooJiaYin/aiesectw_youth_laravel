@@ -116,7 +116,7 @@
                             </div>
                             <div class="form-group{{ $errors->has('content') ? ' has-error' : '' }}">
                                 <label for="content" class="col-md-1 control-label">{{ trans('press.content') }}</label>
-                                <div class="col-md-11">
+                                <div id="mce-editor-container" class="col-md-11">
                                     <textarea id="content" name="content" class="form-control">{{ $press->content or old('content') }}</textarea>
                                     @if ($errors->has('content'))
                                         <span class="help-block">
@@ -155,7 +155,7 @@
     <script src="/auth/plugins/tinymce/tinymce.min.js"></script>
     <script>
         $(function () {
-            if($("#content").length > 0){
+            if($("#mce-editor-container").length > 0){
                 tinymce.init({
                     selector: "textarea#content",
                     language: 'zh_TW',
@@ -165,14 +165,48 @@
                     plugins: [
                         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
                         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                        "save table contextmenu directionality emoticons template paste textcolor imageupload imagetools"
+                        "save table contextmenu directionality emoticons template paste textcolor imageupload imagetools autoresize imagebrowse"
                     ],
-                    toolbar: "removeformat undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image imageupload | print preview media fullpage | forecolor backcolor emoticons",
+                    toolbar: "removeformat undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image imageupload imagebrowse | print preview media fullpage | forecolor backcolor emoticons",
                     style_formats: [
                         {title: '文中小標', block: 'h2'},
                     ]
                 });
+                $(window).on('scroll resize', function () {
+                    var value = $('body').scrollTop(),
+                        editing = $('#mce-editor-container').offset().top,
+                        editingBottom = $('#mce-editor-container').offset().top + $('#mce-editor-container').outerHeight(),
+                        menubar = $('.mce-menubar').outerHeight(),
+                        toolbar = $('.navbar-default').outerHeight(),
+                        editingBox = $('#mceu_33').outerHeight(),
+                        optimize = $('#mce-editor-container').outerHeight()-300 < 0 ? 0 : $('#mce-editor-container').outerHeight()-300 ;
+
+                    if(value > editing-toolbar+menubar && value < editingBottom-300){
+                        $('#mceu_33').css({
+                            position: 'fixed',
+                            top: toolbar+'px',
+                            width: $('.mce-edit-area').width() - 12
+                        });
+                        $('.mce-edit-area').css({ marginTop: editingBox});
+                    }else if(value < editing-toolbar+menubar){
+                        $('#mceu_33').css({
+                            position: 'static',
+                            top: '0px',
+                            width: 'auto'
+                        });
+                        $('.mce-edit-area').css({ marginTop: 0});
+                    }else if(value > editingBottom-300){
+                        $('#mceu_33').css({
+                            position: 'absolute',
+                            top:  menubar+'px',
+                            width: 'auto'
+                        });
+//                        $('.mce-edit-area').css({ marginTop: editingBox});
+                    }
+
+                });
             }
+
         });
     </script>
 @endsection
