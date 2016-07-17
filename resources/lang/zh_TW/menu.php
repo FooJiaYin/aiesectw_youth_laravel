@@ -8,4 +8,5 @@ return [
         'press-list'    => '新聞稿列表',
         'press-new'     => '新增新聞稿',
         'press-edit'    => '編輯新聞稿',
+    'gallery'       => '媒體庫 ',
 ];
