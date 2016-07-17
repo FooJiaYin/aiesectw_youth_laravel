@@ -22,7 +22,7 @@
 					<p>
 						<!-- Change the url here to reflect your image handling controller -->
 						{!! Form::open(array('url' => '/admin/upload', 'method' => 'POST', 'files' => true, 'target' => 'upload_target')) !!}
-						{!! Form::file('file', array('onChange' => 'this.form.submit(); ImageUpload.inProgress();')) !!}
+						{!! Form::file('file', array('accept'=>'image/*', 'onChange' => 'this.form.submit(); ImageUpload.inProgress();')) !!}
 						{!! Form::close() !!}
 					</p>
 				</div>
