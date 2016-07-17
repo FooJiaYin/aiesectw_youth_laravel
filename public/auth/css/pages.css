@@ -1052,6 +1052,18 @@ button.confirm {
   background-color: #f9cd48;
   margin: 10px auto;
 }
+.select-active .gal-detail.active::after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e013";
+  font-size: 17px;
+  color: #f9cd48;
+  position: absolute;
+  right: 30px;
+  top: 45px;
+}
+.select-active .gal-detail.active {
+  border: 4px solid #f9cd48;
+}
 /* ===========
    Maintenance
  =============*/
