@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Youth Speak 後台管理系統">
     <meta name="author" content="Abel">
+    <meta name="_token" content="{!! csrf_token() !!}"/>
 
     <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
     <title>@yield('title')</title>
 
     @yield('header')
-
+    <link href="/auth/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+    <link href="/auth/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
     <link href="/auth/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/auth/css/core.css" rel="stylesheet" type="text/css">
     <link href="/auth/css/icons.css" rel="stylesheet" type="text/css">
@@ -81,6 +83,13 @@
 
 @yield('footerjs')
     <script>
+        $.ajaxSetup({
+            // force ajax call on all browsers
+            cache: true,
+            // Enables cross domain requests
+            crossDomain: true,
+            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+        });
         $(function(){
             {{--{{ dd(Session::get('message'), Session::has('message'),Session::has('message-type')) }}--}}
             @if(Session::has('message') && Session::has('message-type'))
