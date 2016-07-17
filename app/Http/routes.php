@@ -48,7 +48,6 @@ Route::group(['middleware' => ['web','auth']], function(){
 
         Route::get('/', 'Auth\AdminController@index');
 
-
         // Registration Routes...
         Route::get('/register', 'Auth\AuthController@showRegistrationForm');
         Route::post('/register', 'Auth\AuthController@register');
@@ -59,14 +58,23 @@ Route::group(['middleware' => ['web','auth']], function(){
         Route::get('/press/{id}/edit', 'Auth\PressController@edit');
         Route::put('/press/{id}', 'Auth\PressController@update');
         Route::delete('/press/{id}', 'Auth\PressController@destroy');
+        // 媒體庫
+        Route::get('/gallery', 'Auth\PhotoController@index');
+        Route::post('/gallery/delete', 'Auth\PhotoController@delete');
+        Route::post('/gallery/upload', 'Auth\PhotoController@upload');
+        Route::get('/gallery/browse', 'Auth\PhotoController@browse');
         //
         Route::get('/upload', 'Auth\PhotoController@showDialog');
         Route::post('/upload', 'Auth\PhotoController@imageUpload');
 
 
-
     });
 
+    Route::group(['prefix' => 'api'], function(){
+        // 媒體櫃
+        Route::get('/gallery', 'Auth\ApiController@photo_list');
+
+    });
 });
 
 
