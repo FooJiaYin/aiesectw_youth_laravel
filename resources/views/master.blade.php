@@ -57,7 +57,7 @@
 
             <!-- logo -->
             <div class="logo">
-                <a href="home.html">
+                <a href="/">
                     <img class="l-black" src="/img/youthspeak_black.png" />
                     <img class="l-white" src="/img/youthspeak_white.png" />
                     <img class="l-color" src="/img/youthspeak_orange.png" />
@@ -90,7 +90,7 @@
                 <!-- Logo -->
                 <div class="col-md-3 col-sm-3 col-xs-12 mb-xs-30">
                     <a class="footer-logo" href="/">
-                        <img class="l-color" src="img/youthspeak_orange.png" /></a>
+                        <img class="l-color" src="/img/youthspeak_orange.png" /></a>
                 </div>
                 <!-- Logo -->
 
