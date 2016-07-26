@@ -64,7 +64,14 @@
                             <div class="form-group{{ $errors->has('photo_id') ? ' has-error' : '' }}">
                                 <label for="photo_id" class="col-md-1 control-label">{{ trans('press.photo_id') }}</label>
                                 <div class="col-md-8">
-                                    <input id="photo_id" name="photo_id" type="file" />
+                                    <div id="front_preview" data-toggle="modal" data-target="#frontPhoto" style="cursor: pointer;">
+                                    @if((isset($press) && count($press->photo)) || old('photo_id'))
+                                        <img src="{{ $press->photo->path }}" width="100"/>
+                                    @else
+                                        <button type="button"
+                                                class="btn btn-success waves-effect w-xs waves-light m-r-10">{{ trans('photo.select-front-image') }}</button>
+                                    @endif
+                                    </div>
                                     <input type="hidden" id="photo_id" name="photo_id" value="{{ $press->photo_id or old('photo_id') }}"/>
                                 </div>
                                 @if ($errors->has('photo_id'))
@@ -149,13 +156,136 @@
     <!-- End FOOTER -->
 
     </div>
+    <div id="frontPhoto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-full">
+            <div class="modal-content p-0">
+                {{--<div style="display: inline-block;">--}}
+                    {{--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>--}}
+                {{--</div>--}}
+                <ul class="nav nav-tabs navtab-custom nav-justified">
+                    <li class="">
+                        <a href="#upload-front-photo" data-toggle="tab" aria-expanded="false">
+                            <span class="visible-xs">{{ trans('photo.upload-front-image') }}</span>
+                            <span class="hidden-xs">{{ trans('photo.upload-front-image') }}</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a id="select-front-photo-link" href="#select-front-photo" data-toggle="tab" aria-expanded="false">
+                            <span class="visible-xs">{{ trans('photo.select-front-image') }}</span>
+                            <span class="hidden-xs">{{ trans('photo.select-front-image') }}</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content bg-muted">
+                    <div class="tab-pane" id="upload-front-photo">
+                        <div>
+                            {!! Form::open(array('url' => '/admin/gallery/upload', 'method' => 'POST', 'files' => true, 'id' => 'uploadfile', 'class' => 'dropzone')) !!}
+                            <button type="submit" class="btn btn-primary pull-right">{{ trans('photo.upload-file') }}</button>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                    <div class="tab-pane active" id="select-front-photo">
+                        <div>
+                            <div id="photo-container" class="portfolioContainer select-active" style="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">{{ trans('layout.close') }}</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 @endsection
 @section('footerjs')
     {{--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>--}}
     <script src="/auth/plugins/tinymce/tinymce.min.js"></script>
+    <script src="/auth/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/auth/plugins/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="/auth/plugins/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="/auth/plugins/dropzone/dist/dropzone.js"></script>
     <script>
+        var page = 1,
+            $photoContainer = $('#photo-container'),
+            $photoModal = $('#frontPhoto'),
+            $selectFrontTab = $('#select-front-photo'),
+            $selectFrontLink = $('#select-front-photo-link'),
+            $grid;
+        $photoContainer.imagesLoaded( function() {
+            $grid = $photoContainer.masonry({
+                columnWidth: '.photo-item',
+                itemSelector: '.photo-item'
+            });
+        });
+
+        $('#frontPhoto').on('shown.bs.modal', function (e) {
+            callPhotoApi();
+            $(this).unbind(e);
+        });
+        $('#front-image-button').on('click', function (e) {
+            e.preventDefault();
+
+        });
+        $(document).on('click', '.select-active .gal-detail', function (e) {
+            e.preventDefault();
+            var id = $(this).data('id');
+            var src = $(this).find('img').attr('src');
+            $('#photo_id').val(id);
+            $('#front_preview').html('<img src="' + src + '" width="100"/>');
+            $('#frontPhoto').modal('hide');
+        });
+
+        function callPhotoApi() {
+            $.ajax({
+                url: '/api/gallery',
+                data: {
+                    'page' : page,
+                    'html' : 1
+                },
+                success: function(data){
+                    var $items = $(data);
+                    if($items.length > 0){
+                        $items.hide();
+                        $photoContainer.append($items);
+                        $items.imagesLoaded().progress( function(imgLoad, image) {
+                            var $item = $(image.img).parents('.photo-item');
+                            $item.show();
+                            $photoContainer.masonry('appended', $item);
+                        });
+                        // 全部 load 完 Refresh Waypoint
+                        $items.imagesLoaded(function(){
+                            $photoContainer.masonry('layout');
+                            setTimeout(function(){
+                                new Waypoint({
+                                    element: $('#last-child'),
+                                    handler: function(direction) {
+                                        if($selectFrontTab.is(':visible')){
+                                            alert('show');
+                                            $('#last-child').removeAttr('id');
+                                            if(direction == 'down') {
+                                                callPhotoApi();
+                                                this.destroy();
+                                            }
+                                        }
+                                    },
+                                    offset: 'bottom-in-view',
+                                    context: $photoModal
+                                });
+                            }, 1000);
+                        });
+                        page++;
+                    }else{
+                        Waypoint.destroyAll();
+                    }
+                }
+            });
+        }
+
+
         $(function () {
             if($("#mce-editor-container").length > 0){
+                // 初始化 tiny mce
                 tinymce.init({
                     selector: "textarea#content",
                     language: 'zh_TW',
@@ -172,15 +302,15 @@
                         {title: '文中小標', block: 'h2'},
                     ]
                 });
+                // 置頂mcd editor 編輯工具列
                 $(window).on('scroll resize', function () {
                     var value = $('body').scrollTop(),
-                        editing = $('#mce-editor-container').offset().top,
-                        editingBottom = $('#mce-editor-container').offset().top + $('#mce-editor-container').outerHeight(),
-                        menubar = $('.mce-menubar').outerHeight(),
-                        toolbar = $('.navbar-default').outerHeight(),
-                        editingBox = $('#mceu_33').outerHeight(),
-                        optimize = $('#mce-editor-container').outerHeight()-300 < 0 ? 0 : $('#mce-editor-container').outerHeight()-300 ;
-
+                            editing = $('#mce-editor-container').offset().top,
+                            editingBottom = $('#mce-editor-container').offset().top + $('#mce-editor-container').outerHeight(),
+                            menubar = $('.mce-menubar').outerHeight(),
+                            toolbar = $('.navbar-default').outerHeight(),
+                            editingBox = $('#mceu_33').outerHeight(),
+                            optimize = $('#mce-editor-container').outerHeight()-300 < 0 ? 0 : $('#mce-editor-container').outerHeight()-300 ;
                     if(value > editing-toolbar+menubar && value < editingBottom-300){
                         $('#mceu_33').css({
                             position: 'fixed',
@@ -201,12 +331,41 @@
                             top:  menubar+'px',
                             width: 'auto'
                         });
-//                        $('.mce-edit-area').css({ marginTop: editingBox});
                     }
-
                 });
             }
 
+            $('#uploadfile').dropzone({
+                    autoProcessQueue: true,
+                    uploadMultiple: false,
+                    maxFiles: 20,
+                    maxFilesize: 2,
+                    parallelUploads: 20,
+                    // Dropzone settings
+                    init: function() {
+                        var myDropzone = this;
+                        this.element.querySelector("button[type=submit]").addEventListener("click", function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            myDropzone.processQueue();
+                        });
+                        this.on('success', function(file,data){
+                            $items = $(data);
+                            $photoContainer.prepend($items);
+                            $items.imagesLoaded().progress( function(imgLoad, image) {
+                                var $item = $( image.img ).parents('.photo-item');
+                                $item.show();
+                                $photoContainer.masonry( 'prepended', $item)
+                            });
+                            // 全部 load 完 Refresh Waypoint
+                            $items.imagesLoaded(function(){
+                                $photoContainer.masonry('layout');
+                                Waypoint.refreshAll();
+                            });
+                            $selectFrontLink.trigger('click');
+                        })
+                    }
+                });
         });
     </script>
 @endsection

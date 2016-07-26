@@ -50,12 +50,29 @@ class PhotoService extends CoreService {
         try {
             $files = $request->file('file');
             $photos = collect([]);
-            foreach ($files as $file){
-                $origin_name = $file->getClientOriginalName();
-                $extension = $file->getClientOriginalExtension();
+
+            if(is_array($files)){
+                foreach ($files as $file){
+                    $origin_name = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $origin_name = explode('.'.$extension, $origin_name)[0];
+                    $file_name = UuidService::generateRandomStringWithPrefix('IMG', 20);
+                    $date_folder = Carbon::today()->format('Y/m/d');
+                    $move_result = $file->move('uploads/'.$date_folder , $file_name.'.'.$extension);
+
+                    if($move_result){
+                        $file_path = '/uploads/'.$date_folder.'/'.$file_name.'.'.$extension;
+                        $photo = $this->PhotoRepo->store($origin_name, $file_path);
+                        $photos->push($photo);
+                    }
+                }
+            }else{
+                $origin_name = $files->getClientOriginalName();
+                $extension = $files->getClientOriginalExtension();
+                $origin_name = explode('.'.$extension, $origin_name)[0];
                 $file_name = UuidService::generateRandomStringWithPrefix('IMG', 20);
                 $date_folder = Carbon::today()->format('Y/m/d');
-                $move_result = $file->move('uploads/'.$date_folder , $file_name.'.'.$extension);
+                $move_result = $files->move('uploads/'.$date_folder , $file_name.'.'.$extension);
 
                 if($move_result){
                     $file_path = '/uploads/'.$date_folder.'/'.$file_name.'.'.$extension;
@@ -63,6 +80,7 @@ class PhotoService extends CoreService {
                     $photos->push($photo);
                 }
             }
+
             return $photos;
 
         } catch (Exception $exception) {
@@ -88,10 +106,10 @@ class PhotoService extends CoreService {
         }
     }
 
-    public function find($id)
+    public function find($id, $need_cache = true)
     {
         try {
-            return $this->PhotoRepo->find($id);
+            return $this->PhotoRepo->find($id, $need_cache);
         } catch (Exception $exception) {
             throw $exception;
         }

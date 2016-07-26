@@ -4,6 +4,7 @@ namespace App\YouthSpeak\Press\Services;
 
 use App\YouthSpeak\Category\Services\CategoryService;
 use App\YouthSpeak\Core\Services\CoreService;
+use App\YouthSpeak\Photo\Services\PhotoService;
 use App\YouthSpeak\Press\Constant\PressConstant;
 use App\YouthSpeak\Press\Entities\Press;
 use App\YouthSpeak\Press\Repository\PressRepository;
@@ -16,6 +17,7 @@ class PressService extends CoreService {
     protected $PressRepo;
     protected $CategoryService;
     protected $UserService;
+    protected $PhotoService;
     const ASCENDING = PressConstant::ORDER_ASCENDING;
     const DESCENDING = PressConstant::ORDER_DESCENDING;
     const CREATE_TIME = PressConstant::ORDER_CREATE_TIME_COLUMN;
@@ -30,6 +32,7 @@ class PressService extends CoreService {
         $this->PressRepo = new PressRepository();
         $this->CategoryService = new CategoryService();
         $this->UserService = new UserService();
+        $this->PhotoService = new PhotoService();
     }
 
     public function getPressExtraInfo(Press $Press, $need_cache = true)
@@ -40,6 +43,10 @@ class PressService extends CoreService {
 
             $user = $this->UserService->find($Press->user_id, $need_cache);
             $Press->user = $user;
+
+            $photo = $this->PhotoService->find($Press->photo_id, $need_cache);
+            $Press->photo = $photo;
+
 
             return $Press;
         } catch (Exception $exception) {
@@ -102,10 +109,31 @@ class PressService extends CoreService {
         }
     }
 
+    public function getExtraInfo(Press $Press)
+    {
+        try {
+            // 存圖片關聯進新聞稿
+            $press_photo_id = $Press->photo_id;
+            $press_photo = $this->PhotoService->find($press_photo_id);
+            if(!is_null($press_photo)){
+                $Press->photo = $press_photo;
+            }
+
+            return $Press;
+        } catch (Exception $exception) {
+            throw $exception;
+        }
+    }
+
     public function findPublishOrFail($id)
     {
         try {
             $Press = $this->PressRepo->findPublishOrFail($id);
+
+            if(!is_null($Press)){
+                $Press = $this->getPressExtraInfo($Press);
+            }
+
             return $Press;
         } catch (Exception $exception) {
             throw $exception;

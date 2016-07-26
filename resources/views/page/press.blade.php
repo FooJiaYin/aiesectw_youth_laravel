@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="post-media">
-                            <img alt="" src="img/full/28.jpg">
+                            <img alt="" src="{{ $press->photo->path or '' }}">
                         </div>
 
                         <div class="post-entry">
@@ -137,29 +137,29 @@
     <!-- End Blog Post Section -->
 
     <!-- Post Next Prev Bar -->
-    <section class="mb-60">
-        <div class="container">
-            <div class="item-nav">
-                <a href="" class="item-prev">
-                    <div class="prev-btn"><i class="fa fa-angle-left"></i></div>
-                    <div class="item-prev-text xs-hidden">
-                        <h6>Prev Post</h6>
-                    </div>
-                </a>
+    {{--<section class="mb-60">--}}
+        {{--<div class="container">--}}
+            {{--<div class="item-nav">--}}
+                {{--<a href="" class="item-prev">--}}
+                    {{--<div class="prev-btn"><i class="fa fa-angle-left"></i></div>--}}
+                    {{--<div class="item-prev-text xs-hidden">--}}
+                        {{--<h6>Prev Post</h6>--}}
+                    {{--</div>--}}
+                {{--</a>--}}
 
-                <a class="item-all-view">
-                    <h6>Blog Page</h6>
-                </a>
+                {{--<a class="item-all-view">--}}
+                    {{--<h6>Blog Page</h6>--}}
+                {{--</a>--}}
 
-                <a href="" class="item-next">
-                    <div class="next-btn"><i class="fa fa-angle-right"></i></div>
-                    <div class="item-next-text xs-hidden">
-                        <h6>Next Post</h6>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+                {{--<a href="" class="item-next">--}}
+                    {{--<div class="next-btn"><i class="fa fa-angle-right"></i></div>--}}
+                    {{--<div class="item-next-text xs-hidden">--}}
+                        {{--<h6>Next Post</h6>--}}
+                    {{--</div>--}}
+                {{--</a>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
     <!-- End Post Next Prev Bar -->
 
     <!-- End CONTENT ------------------------------------------------------------------------------>

@@ -83,7 +83,7 @@
     <script src="/auth/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="/auth/plugins/masonry/dist/masonry.pkgd.min.js"></script>
     <script src="/auth/plugins/waypoints/lib/jquery.waypoints.js"></script>
-
+    <!-- tinymce own plugin -->
     <script src="/auth/plugins/tinymce/plugins/imagebrowse/insert.js"></script>
     <script>
         var page = 2,
@@ -135,6 +135,7 @@
                         });
                         // 全部 load 完 Refresh Waypoint
                         $items.imagesLoaded(function(){
+                            $photoContainer.masonry('layout');
                             Waypoint.refreshAll();
                         });
                         page++;
