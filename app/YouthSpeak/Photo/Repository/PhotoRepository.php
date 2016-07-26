@@ -2,15 +2,22 @@
 namespace App\YouthSpeak\Photo\Repository;
 
 use App\YouthSpeak\Core\Repository\CoreRepository;
+use App\YouthSpeak\Core\Support\CacheTrait;
 use App\YouthSpeak\Photo\Constant\PhotoConstant;
 use App\YouthSpeak\Photo\Entities\Photo;
+use Cache;
 use Exception;
 
 class PhotoRepository extends CoreRepository {
+    use CacheTrait;
     /**
      * PhotoRepository constructor.
      */
     protected $Photo ;
+
+    public $cache_key_list = [
+        'photo_id'  => PhotoConstant::CACHE_KEY_PHOTO_ID,       // 圖片快取
+    ];
 
     public function __construct()
     {
@@ -77,10 +84,82 @@ class PhotoRepository extends CoreRepository {
         }
     }
 
-    public function find($id)
+    /**
+     * 存入單一圖片快取
+     * @param       Photo           $photo
+     *
+     * @throws      Exception
+     *
+     * @access      public
+     * @author      Abel            abel@thenewslnes.com
+     * @date        2016-07-26
+     */
+    public function putPhotoCache(Photo $photo)
     {
         try {
-            return $this->Photo->find($id);
+            $cache_minute = $this->getCacheExpiredMinutes();
+
+            $photo_id_cache_key = $this->getPhotoIdCacheKey($photo->id);
+            Cache::put($photo_id_cache_key, $photo, $cache_minute);
+
+        } catch (Exception $exception) {
+            throw $exception;
+        }
+    }
+
+
+    /**
+     * 取得圖片編號快取鍵值
+     * @param       $photo_id
+     *
+     * @return      mixed
+     *
+     * @access      public
+     * @author      Abel            abel@thenewslnes.com
+     * @date        2016-07-08
+     */
+    public function getPhotoIdCacheKey($photo_id)
+    {
+        $photo_id_cache_key = $this->encryptCacheKey($photo_id);
+        $search = [
+            '{photo_id}',
+        ];
+        $replace = [
+            $photo_id_cache_key,
+        ];
+        $cache_key = str_replace($search, $replace, $this->cache_key_list['photo_id']);
+        return $cache_key;
+    }
+
+    /**
+     * 找尋圖片
+     * @param       $id
+     * @param       bool            $need_cache
+     *
+     * @return      mixed
+     * @throws      Exception
+     *
+     * @access      public
+     * @author      Abel            abel@thenewslnes.com
+     * @date        2016-07-26
+     */
+    public function find($id, $need_cache = true)
+    {
+        try {
+            $cache_key = $this->getPhotoIdCacheKey($id);
+
+            if($need_cache && Cache::has($cache_key)){
+                return Cache::get($cache_key);
+            }
+
+            $Photo = $this->Photo
+                ->find($id);
+
+            if(!is_null($Photo)){
+                $this->putPhotoCache($Photo);
+            }
+            return $Photo;
+
         } catch (Exception $exception) {
             throw $exception;
         }
