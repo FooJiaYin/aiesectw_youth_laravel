@@ -59,6 +59,7 @@ class PressController extends Controller
         try {
             $press = $this->PressService->find($id, $need_cache = false);
             $categories = $this->CategoryService->getAll();
+            $press = $this->PressService->getPressExtraInfo($press, false);
 
             return view('auth.press.edit', compact('press', 'categories'));
         } catch (Exception $exception) {

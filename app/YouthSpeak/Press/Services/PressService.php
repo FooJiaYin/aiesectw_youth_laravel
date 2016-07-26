@@ -109,21 +109,6 @@ class PressService extends CoreService {
         }
     }
 
-    public function getExtraInfo(Press $Press)
-    {
-        try {
-            // 存圖片關聯進新聞稿
-            $press_photo_id = $Press->photo_id;
-            $press_photo = $this->PhotoService->find($press_photo_id);
-            if(!is_null($press_photo)){
-                $Press->photo = $press_photo;
-            }
-
-            return $Press;
-        } catch (Exception $exception) {
-            throw $exception;
-        }
-    }
 
     public function findPublishOrFail($id)
     {
