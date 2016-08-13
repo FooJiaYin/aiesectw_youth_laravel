@@ -7,7 +7,7 @@
             <div class="row title light-color">
                 <h2 class="h2">青年影響力論壇<br/>最後世代 大哉問</h2>
                 <div class="page-breadcrumb">
-                    <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">立即參與</span>
+                    <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">立即參與</a>
                 </div>
             </div>
         </div>
@@ -753,9 +753,9 @@
                 <i class="ion ion-card"></i>
             </div>
             <h3>立即購票</h3>
-            {{--<iframe title="Accupass 報名表" marginwidth="0" marginheight="0" frameborder="0" border="0" scrolling="yes"--}}
-                    {{--src="//www.accupass.com/event/shareregister/1606040410331987297594" width="100%"--}}
-                    {{--height="900px"></iframe>--}}
+            <iframe title="Accupass 報名表" marginwidth="0" marginheight="0" frameborder="0" border="0" scrolling="yes"
+                    src="//www.accupass.com/event/shareregister/1606040410331987297594" width="100%"
+                    height="900px"></iframe>
         </div>
     </section>
     <hr />
@@ -853,8 +853,8 @@
         });
     </script>
 
-    {{--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVPV8cGvJ9iEvkU5B9bvzLh7U5I00550&sensor=false"></script>--}}
-    {{--<script type="text/javascript" src="/js/map.js"></script>--}}
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVPV8cGvJ9iEvkU5B9bvzLh7U5I00550&sensor=false"></script>
+    <script type="text/javascript" src="/js/map.js"></script>
 @endsection
 
 
