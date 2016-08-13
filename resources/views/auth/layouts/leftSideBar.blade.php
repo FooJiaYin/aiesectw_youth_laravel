@@ -154,8 +154,8 @@
             <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img
                         src="/img/favicon.png" alt="user-img" class="img-circle"> </a>
             <ul class="dropdown-menu">
-                <li><a href="javascript:void(0)"><i class="zmdi zmdi-face"></i> Profile</a></li>
-                <li><a href="javascript:void(0)"><i class="zmdi zmdi-settings"></i> Settings</a></li>
+                {{--<li><a href="javascript:void(0)"><i class="zmdi zmdi-face"></i> Profile</a></li>--}}
+                {{--<li><a href="javascript:void(0)"><i class="zmdi zmdi-settings"></i> Settings</a></li>--}}
                 <li><a href="{{ url('/logout') }}"><i class="zmdi zmdi-power"></i> Logout</a></li>
             </ul>
         </div>

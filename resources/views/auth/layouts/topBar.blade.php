@@ -19,26 +19,26 @@
                 </div>
 
                 <ul class="nav navbar-nav hidden-xs">
-                    <li><a href="#" class="waves-effect">Files</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown"
-                           role="button" aria-haspopup="true" aria-expanded="false">Projects <span
-                                    class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Projects two</a></li>
-                            <li><a href="#">Graphic design</a></li>
-                            <li><a href="#">Projects four</a></li>
-                        </ul>
-                    </li>
+                    {{--<li><a href="#" class="waves-effect">Files</a></li>--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown"--}}
+                           {{--role="button" aria-haspopup="true" aria-expanded="false">Projects <span--}}
+                                    {{--class="caret"></span></a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li><a href="#">Web design</a></li>--}}
+                            {{--<li><a href="#">Projects two</a></li>--}}
+                            {{--<li><a href="#">Graphic design</a></li>--}}
+                            {{--<li><a href="#">Projects four</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
                 </ul>
 
-                <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                    <input type="text" placeholder="Search..." class="form-control app-search-input">
-                    <a href=""><i class="fa fa-search"></i></a>
-                </form>
+                {{--<form role="search" class="navbar-left app-search pull-left hidden-xs">--}}
+                    {{--<input type="text" placeholder="Search..." class="form-control app-search-input">--}}
+                    {{--<a href=""><i class="fa fa-search"></i></a>--}}
+                {{--</form>--}}
 
-                <ul class="nav navbar-nav navbar-right pull-right">
+                <ul class="nav navbar-nav navbar-right pull-right" style="display:none;">
 
                     <li class="dropdown hidden-xs">
                         <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
