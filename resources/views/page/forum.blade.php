@@ -11,7 +11,7 @@
                 <div class="spacer-90"></div>
                 <div class="spacer-90"></div>
                 <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">
-                    <button class="btn btn-lg btn-black btn-color-line">立即參與</button>
+                    <button class="btn btn-lg btn-black btn-color-b">立即參與</button>
                 </a>
             </div>
         </div>
