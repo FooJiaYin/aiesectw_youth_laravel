@@ -1,15 +1,25 @@
 @extends('master')
 
 @section('content')
+    <style>
+        .soldButton button{
+            margin-top: 360px;
+        }
+        @media(max-width: 400px){
+            .inner-intro{
+                height: 400px;
+                background-position-x: -475px;
+            }
+            .soldButton button{
+                margin-top: 270px;
+            }
+        }
+    </style>
     <!-- Intro Section -->
     <section class="inner-intro" style="background-image: url('/img/background.jpg');">
         <div class="container">
             <div class="row title">
                 {{--<h2 class="h2">青年影響力論壇<br/>最後世代 大哉問</h2>--}}
-                <div class="spacer-90"></div>
-                <div class="spacer-90"></div>
-                <div class="spacer-90"></div>
-                <div class="spacer-90"></div>
                 <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">
                     <button class="btn btn-lg btn-black btn-color-b">立即參與</button>
                 </a>

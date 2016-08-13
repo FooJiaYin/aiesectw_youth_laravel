@@ -3995,7 +3995,6 @@ header.sticky .navigation a.current-ele {
   margin: 0px;
 }
 .accordion-title.accordion-category {
-  text-align: center;
   padding: 10px;
   background: #323232;
   color: #fff;
@@ -5868,16 +5867,6 @@ ul.project-detail-block {
 
 .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
   right: 0;
-}
-.nf-carousel-theme .owl-controls .owl-buttons .owl-prev {
-  left: 0;
-  margin-left: -51px;
-  opacity: 0;
-}
-.nf-carousel-theme .owl-controls .owl-buttons .owl-next {
-  right: 0;
-  margin-right: -51px;
-  opacity: 0;
 }
 
 .content-carousel:hover .owl-controls .owl-buttons .owl-prev, .content-carousel:hover .owl-controls .owl-buttons .owl-next {

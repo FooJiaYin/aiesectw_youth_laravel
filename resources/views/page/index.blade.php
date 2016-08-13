@@ -177,14 +177,16 @@
                         一波波劇變讓你我未來充滿不確定<br />
                         本屆論壇將帶你從未來角度出發<br />
                         除了思考問題解方，更帶你認識什麼產業將是未來主流，你最值得投入！</p>
-                    <button class="btn btn-md btn-color-line mt-15"><i class="ion ion-android-cart"></i>前往購票</button>
+                    <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">
+                        <button class="btn btn-md btn-color-line mt-15"><i class="ion ion-android-cart"></i>前往購票</button>
+                    </a>
                 </div>
                 <div class="wow col-md-6 fadeInRight">
                     <h3>青年未來大講堂｜<span class="h5">東協無限</span></h3>
                     <p>世界版圖翻轉中！你知道東協將成為全球未來經濟新重心嗎！<br />
                         未來大講堂將以業界實務觀點，為你深度剖析東協的潛力，<br />
                         一起帶你認識你所不知道的東協，告訴你這片充滿未來性的新區塊！</p>
-                    <button class="btn btn-md btn-color-line mt-15"><i class="ion ion-android-cart"></i>前往購票</button>
+                    <button class="btn btn-md btn-color-line mt-15">已經結束</button>
                 </div>
             </div>
         </div>
