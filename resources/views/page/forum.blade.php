@@ -754,8 +754,8 @@
             </div>
             <h3>立即購票</h3>
             <iframe title="Accupass 報名表" marginwidth="0" marginheight="0" frameborder="0" border="0" scrolling="yes"
-                    src="https://www.accupass.com/event/shareregister/1606040410331987297594" width="100%"
-                    height="900px" onload="this.style.height = this.contentWindow.document.body.scrollHeight + 'px';"></iframe>
+                    src="//www.accupass.com/event/shareregister/1606040410331987297594" width="100%"
+                    height="900px"></iframe>
         </div>
     </section>
     <hr />
@@ -853,8 +853,8 @@
         });
     </script>
 
-    <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVPV8cGvJ9iEvkU5B9bvzLh7U5I00550"></script>
-    <script async defer type="text/javascript" src="/js/map.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVPV8cGvJ9iEvkU5B9bvzLh7U5I00550"></script>
+    <script type="text/javascript" src="/js/map.js"></script>
 @endsection
 
 

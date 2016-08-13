@@ -204,7 +204,6 @@
 
 </script>
 <!-- ga code -->
-<!-- tag manager code -->
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MLB6V9"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -214,7 +213,6 @@
             '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MLB6V9');</script>
 <!-- End Google Tag Manager -->
-<!-- tag manager code -->
 <!-- clicky code -->
 {{--<a title="Real Time Web Analytics" href="http://clicky.com/100967232"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>--}}
 <script src="//static.getclicky.com/js" type="text/javascript"></script>
