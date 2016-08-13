@@ -114,7 +114,7 @@
     <!-- End About Section-->
     <hr />
     <!-- Service Section -->
-    <section id="service" class="tb ptb-sm-80">
+    <section id="service" class="ptb ptb-sm-80">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
