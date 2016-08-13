@@ -7,7 +7,7 @@
             <div class="row title light-color">
                 <h2 class="h2">青年影響力論壇<br/>最後世代 大哉問</h2>
                 <div class="page-breadcrumb">
-                    <a href="/">首頁</a>/<span>青年影響力論壇</span>
+                    <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">立即參與</span>
                 </div>
             </div>
         </div>
