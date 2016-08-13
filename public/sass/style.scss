@@ -1865,6 +1865,13 @@ header.sticky .navigation a.current-ele {
   position: relative;
   padding: 20px 20px;
   margin: 0px;
+
+  &.accordion-category{
+    padding: 10px;
+    background: #323232;
+    color: #fff;
+  }
+
   &:not(.no-child).active {
     /*background: #fafafa;*/
     color: $main-color;

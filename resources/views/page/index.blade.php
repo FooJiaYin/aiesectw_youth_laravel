@@ -75,7 +75,7 @@
     <!-- End Intro Section -->
 
     <!--About Section-->
-    <section id="about" class="wow fadeInLeft ptb ptb-sm-80">
+    <section id="about" class="wow fadeIn ptb ptb-sm-80">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
@@ -114,7 +114,7 @@
     <!-- End About Section-->
     <hr />
     <!-- Service Section -->
-    <section id="service" class="wow fadeInLeft ptb ptb-sm-80">
+    <section id="service" class="tb ptb-sm-80">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
@@ -127,7 +127,7 @@
             </div>
             <div class="row mt-80">
                 <!-- Welcome Content -->
-                <div class="col-md-7 mb-30">
+                <div class="col-md-7 mb-30 wow fadeInLeft">
                     <div class="spacer-15"></div>
                     <h3>2016年的青年影響力大調查已經結束！<span class="xs-hidden"><br/></span>花60秒關心你我都重視的事情！</h3>
                     <p><b>氣候變遷</b>、<b>世界和平</b>、<b>教育品質</b><span class="xs-hidden"><br/></span>位居青年最關注的聯合國永續議題前三名</p>
@@ -135,7 +135,7 @@
                 <!-- End Welcome Content -->
 
                 <!-- Skills -->
-                <div class="col-md-5">
+                <div class="col-md-5 wow fadeInRight">
                     <div class="skillbar" data-percent="80%">
                         <div class="skillbar-title">青年認為最有效學習方式是實戰經驗</div>
                         <div class="skill-bar-percent">80%</div>
@@ -242,62 +242,4 @@
     </section>
     <!-- End Statement Section -->
 
-    <!-- Client Logos Section -->
-    <section id="client-logos" class="wow fadeIn ptb ptb-sm-80">
-        <div class="container">
-            <div class="owl-carousel client-carousel nf-carousel-theme ">
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/01.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/02.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/03.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/04.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/05.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/06.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/08.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/01.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/02.png" alt="" />
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-logo">
-                        <img src="/img/logos/03.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Client Logos Section -->
 @endsection

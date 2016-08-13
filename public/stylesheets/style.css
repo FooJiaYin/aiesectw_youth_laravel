@@ -3994,6 +3994,12 @@ header.sticky .navigation a.current-ele {
   padding: 20px 20px;
   margin: 0px;
 }
+.accordion-title.accordion-category {
+  text-align: center;
+  padding: 10px;
+  background: #323232;
+  color: #fff;
+}
 .accordion-title:not(.no-child).active {
   /*background: #fafafa;*/
   color: #f47631;

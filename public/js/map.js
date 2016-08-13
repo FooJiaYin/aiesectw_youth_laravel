@@ -14,7 +14,7 @@ function init() {
         scrollwheel: false, //set to true to enable mouse scrolling while inside the map area
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(21.170240, 72.831061), // Surat
+        center: new google.maps.LatLng(25.0216697,121.5352956),
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
@@ -214,10 +214,10 @@ function init() {
 
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(21.170240, 72.831061),
+        position: new google.maps.LatLng(25.0216697,121.5352956),
         map: map,
-        title: 'Nileforest',
-        icon: 'img/map-marker.png'
+        title: '台大綜合體育館多功能球場',
+        icon: '/img/map-marker.png'
 
     });
 };
