@@ -853,7 +853,7 @@
         });
     </script>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVPV8cGvJ9iEvkU5B9bvzLh7U5I00550"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVPV8cGvJ9iEvkU5B9bvzLh7U5I00550&sensor=false"></script>
     <script type="text/javascript" src="/js/map.js"></script>
 @endsection
 

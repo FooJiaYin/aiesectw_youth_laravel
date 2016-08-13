@@ -169,10 +169,10 @@
 
 <!-- JS -->
 
-<script src="/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
 
 <script src="/js/plugin/jquery.easing.js" type="text/javascript"></script>
-<script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/js/plugin/jquery.flexslider.js" type="text/javascript"></script>
 <script src="/js/plugin/background-check.min.js" type="text/javascript"></script>
@@ -204,15 +204,15 @@
 
 </script>
 <!-- ga code -->
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MLB6V9"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MLB6V9');</script>
-<!-- End Google Tag Manager -->
+{{--<!-- Google Tag Manager -->--}}
+{{--<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MLB6V9"--}}
+                  {{--height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>--}}
+{{--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':--}}
+            {{--new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],--}}
+            {{--j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=--}}
+            {{--'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);--}}
+    {{--})(window,document,'script','dataLayer','GTM-MLB6V9');</script>--}}
+{{--<!-- End Google Tag Manager -->--}}
 <!-- clicky code -->
 {{--<a title="Real Time Web Analytics" href="http://clicky.com/100967232"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>--}}
 <script src="//static.getclicky.com/js" type="text/javascript"></script>
