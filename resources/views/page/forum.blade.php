@@ -2,13 +2,17 @@
 
 @section('content')
     <!-- Intro Section -->
-    <section class="inner-intro overlay-dark20" style="background-image: url('/img/background.png');">
+    <section class="inner-intro" style="background-image: url('/img/background.jpg');">
         <div class="container">
-            <div class="row title light-color">
-                <h2 class="h2">青年影響力論壇<br/>最後世代 大哉問</h2>
-                <div class="page-breadcrumb">
-                    <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">立即參與</a>
-                </div>
+            <div class="row title">
+                {{--<h2 class="h2">青年影響力論壇<br/>最後世代 大哉問</h2>--}}
+                <div class="spacer-90"></div>
+                <div class="spacer-90"></div>
+                <div class="spacer-90"></div>
+                <div class="spacer-90"></div>
+                <a class="soldButton" target="_blank" href="http://www.accupass.com/go/9thysf">
+                    <button class="btn btn-lg btn-black btn-color-line">立即參與</button>
+                </a>
             </div>
         </div>
     </section>
@@ -119,68 +123,81 @@
                                     <h6 class="accordion-title no-child">09:00~09:10 開幕式</h6>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">09:10~10:00 對談 |青年大哉問-從我們的問題,找共同的可能</h6>
+                                    <h6 class="accordion-title">09:10~10:00 對談 | 從台灣到全球16萬青年觀點，看世代問題與解方</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <h5>
-                                            環保署署長 李應元|國際氣候發展智庫執行長 趙恭岳|台灣青年氣候聯盟 許菀庭|AIESEC 2015-16總會長 周致遠<br/>
-                                            [跨界連線]藝珂人事東北亞區總經理 陳玉芬|世紀奧美公關顧問 丁菱娟<br/>
+                                            <span style="color: rgb(25,51,127);">
+                                                環保署署長 李應元<br/>國際氣候發展智庫執行長 趙恭岳<br/>台灣青年氣候聯盟 許菀庭<br/>AIESEC 2015-16總會長 周致遠<br/>
+                                                [跨界連線]藝珂人事東北亞區總經理 陳玉芬、世紀奧美公關顧問 丁菱娟
+                                            </span>
+                                            <br/>
                                             從AIESEC全球16萬、台灣9000位青年的調查中，看青年世代面臨的問題與解方
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">10: 00~10:30 專題演說 |九又四分之三的解答</h6>
+                                    <h6 class="accordion-title">10: 00~10:30 專題演說 | 創新x科技x跨界 史丹佛講師、迪士尼指名低碳團隊前瞻視野與想法</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <h5>
+                                            <span style="color: rgb(25,51,127);">
                                             史丹佛大學講師、迪士尼科學家 許續仁(Kevin Hsu)<br/>
+                                            </span>
                                             許續仁是迪士尼規劃研究科學家，也在史丹佛大學的城市研究課中授課。他致力研究低排碳城市，將給你國際視野與實踐可能性。
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title no-child accordion-category">窺趨勢 世界的關鍵趨勢:永續</h6>
+                                    <h6 class="accordion-title no-child accordion-category"><b>窺趨勢</b> 世界的關鍵趨勢:永續</h6>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">10: 40~11:10 專題演說 |看見最重要的趨勢:永續</h6>
+                                    <h6 class="accordion-title">10: 40~11:10 專題演說 | 從18家指標企業顧問經驗,看永續為企業帶來的改變與機會</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <h5>
-                                            KPMG安侯建業永續發展顧問總經理黃正忠<br/>
-                                            20年永續趨勢、18家代表性顧客(日月光半導體、王品、富邦金控...等)經驗;聚焦金融、城市、科技,最深入的業界觀點 告訴你永續趨勢為企業帶來的改變與機會!
+                                            <span style="color: rgb(25,51,127);">
+                                                KPMG安侯建業永續發展顧問總經理黃正忠<br/>
+                                            </span>
+                                            20年永續趨勢、18家代表性顧客(日月光半導體、王品、富邦金控...等)經驗;聚焦金融、城市、科技，最深入的業界觀點 告訴你永續趨勢為企業帶來的改變與機會!
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title no-child accordion-category">尋突破 經濟綠色轉型潛力</h6>
+                                    <h6 class="accordion-title no-child accordion-category"><b>尋突破</b> 經濟綠色轉型潛力</h6>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">11:10~12:30 演說X對談|突破經濟的綠色潛力</h6>
+                                    <h6 class="accordion-title">11:10~12:30 演說X對談 | 永續浪潮來襲!企業CEO第一手轉型經驗與觀察!</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <h5>
-                                            日月光半導體營運長 吳田玉|國泰金控總經理 李長庚|綠色貿易辦公室主任 溫麗琪<br/>
+                                            <span style="color: rgb(25,51,127);">
+                                                日月光半導體營運長 吳田玉<br/>國泰金控總經理 李長庚<br/>綠色貿易辦公室主任 溫麗琪<br/>
+                                            </span>
                                             企業CEO第一手經驗與觀察，當面臨永續浪潮變革，企業該如何進行轉型?用先行者的經驗啟發你行動的靈感!
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title no-child accordion-category">探未來 創新工作坊|智慧城市大未來</h6>
+                                    <h6 class="accordion-title no-child accordion-category"><b>探未來</b> 創新工作坊|智慧城市大未來</h6>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">13:30~16:30</h6>
+                                    <h6 class="accordion-title">13:30~16:30 工作坊 | 探索智慧城市未來</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <h5>
-                                            業師團隊:KPMG安侯建業 永續發展顧問團隊|IBM x 愛樂活 生態永續數據分析團隊|台北智慧城市專案辦公室<br/>
-                                            由業師團隊帶領解析實際案例,小組討論實際案例及解方,與業界趨勢、實務經驗接軌,掌握智慧城市發展實際方向與經驗。
+                                            <span style="color: rgb(25,51,127);">
+                                                【業師團隊】<br/>KPMG安侯建業 永續發展顧問團隊<br/>IBM x 愛樂活 生態永續數據分析團隊<br/>台北智慧城市專案辦公室<br/>
+                                            </span>
+                                            由業師團隊帶領解析實際案例，小組討論實際案例及解方，與業界趨勢、實務經驗接軌，掌握智慧城市發展實際方向與經驗。
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title no-child accordion-category">創無限 科技X創新 低碳經濟實踐</h6>
+                                    <h6 class="accordion-title no-child accordion-category"><b>創無限</b> 科技X創新 低碳經濟實踐</h6>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">17:00~18:30 演說X對談I 無限科技 x 聚焦創新</h6>
+                                    <h6 class="accordion-title">17:00~18:30 演說X對談 | 創業者 x 企業CEO 剖析科技結合永續 創造藍海之路</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <h5>
-                                            綠然科技創辦人 胡德琪|食藝集團創辦人 鄭惠如|立凱電董事長兼總經理 張聖時<br/>
+                                            <span style="color: rgb(25,51,127);">
+                                                綠然科技創辦人 胡德琪<br/>食藝集團創辦人 鄭惠如<br/>立凱電董事長兼總經理 張聖時<br/>
+                                            </span>
                                             運輸、能源、飲食領域剖析結合科技與永續方法。無論你希望創業、或是進入企業工作，各領域CEO、創業者經驗與對談，將給你未來職涯及發展目標明確方向。
                                         </h5>
                                     </div>
@@ -189,9 +206,12 @@
                                     <h6 class="accordion-title no-child accordion-category">閉幕 走出你的影響力</h6>
                                 </div>
                                 <div class="accordion-section">
-                                    <h6 class="accordion-title">18:30~19:00 B型企業協會副理事長 連庭凱</h6>
+                                    <h6 class="accordion-title">18:30~19:00 演說 | 6成青年想進入企業工作!B型企業模式探索企業獲益與社會永續</h6>
                                     <div class="accordion-content defualt-hidden" style="">
                                         <h5>
+                                            <span style="color: rgb(25,51,127);">
+                                                B型企業協會副理事長 連庭凱<br/>
+                                            </span>
                                             根據AIESEC青年影響力大調查顯示，超過6成青年想進入企業工作，但如何兼顧發展與我們深愛的地方發展?B型企業是兼顧企業獲益與社會永續的代表，我們將在這裡，一起探討我們發揮影響力的方法!
                                         </h5>
                                     </div>
@@ -253,74 +273,6 @@
                 <div class="item">
                     <div class="team-item nf-col-padding">
                         <div class="team-item-img">
-                            <img src="/img/team/01.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>周致遠</h5>
-                                    <p>AIESEC 2015-16年度 總會長</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>周致遠</h5>
-                            <p class="">AIESEC 2015-16年度 總會長</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/02.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>​趙恭岳</h5>
-                                    <p>國際氣候發展智庫執行長</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>​趙恭岳</h5>
-                            <p class="">國際氣候發展智庫執行長</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/03.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>許菀庭</h5>
-                                    <p>台灣青年氣候聯盟執行長</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>許菀庭</h5>
-                            <p class="">台灣青年氣候聯盟執行長</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/04.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>李應元</h5>
-                                    <p>環保署署長</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>李應元</h5>
-                            <p class="">環保署署長</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
                             <img src="/img/team/05.png" alt="" />
                             <div class="team-item-detail">
                                 <div class="team-item-detail-inner light-color">
@@ -332,23 +284,6 @@
                         <div class="team-item-info">
                             <h5>黃正忠</h5>
                             <p class="">KPMG安侯建業 永續發展顧問總經理</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/06.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>溫麗琪</h5>
-                                    <p>綠色貿易辦公室主任</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>溫麗琪</h5>
-                            <p class="">綠色貿易辦公室主任</p>
                         </div>
                     </div>
                 </div>
@@ -372,6 +307,23 @@
                 <div class="item">
                     <div class="team-item nf-col-padding">
                         <div class="team-item-img">
+                            <img src="/img/team/30.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>李長庚</h5>
+                                    <p>國泰金控總經理</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>李長庚</h5>
+                            <p class="">國泰金控總經理</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
                             <img src="/img/team/08.png" alt="" />
                             <div class="team-item-detail">
                                 <div class="team-item-detail-inner light-color">
@@ -386,6 +338,126 @@
                         </div>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/04.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>李應元</h5>
+                                    <p>環保署署長</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>李應元</h5>
+                            <p class="">環保署署長</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/06.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>溫麗琪</h5>
+                                    <p>綠色貿易辦公室主任</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>溫麗琪</h5>
+                            <p class="">綠色貿易辦公室主任</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/02.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>​趙恭岳</h5>
+                                    <p>國際氣候發展智庫執行長</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>​趙恭岳</h5>
+                            <p class="">國際氣候發展智庫執行長</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/29.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>連庭凱</h5>
+                                    <p>亞太B型企業協會副理事長</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>連庭凱</h5>
+                            <p class="">亞太B型企業協會副理事長</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/01.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>周致遠</h5>
+                                    <p>AIESEC 2015-16年度 總會長</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>周致遠</h5>
+                            <p class="">AIESEC 2015-16年度 總會長</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/03.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>許菀庭</h5>
+                                    <p>台灣青年氣候聯盟執行長</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>許菀庭</h5>
+                            <p class="">台灣青年氣候聯盟執行長</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/31.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>林藝</h5>
+                                    <p>寶島淨鄉團團長</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>林藝</h5>
+                            <p class="">寶島淨鄉團團長</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="item">
                     <div class="team-item nf-col-padding">
                         <div class="team-item-img">
@@ -522,74 +594,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/17.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>李震宇</h5>
-                                    <p>台北智慧城市辦公室</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>李震宇</h5>
-                            <p class="">台北智慧城市辦公室</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/18.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>秦偉翔</h5>
-                                    <p>台北智慧城市辦公室</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>秦偉翔</h5>
-                            <p class="">台北智慧城市辦公室</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/19.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>黃淳儀</h5>
-                                    <p>台北智慧城市辦公室</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>黃淳儀</h5>
-                            <p class="">台北智慧城市辦公室</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/20.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>張旭佑</h5>
-                                    <p>台北智慧城市辦公室</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>張旭佑</h5>
-                            <p class="">台北智慧城市辦公室</p>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="item">
                     <div class="team-item nf-col-padding">
                         <div class="team-item-img">
@@ -675,6 +680,76 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/17.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>李震宇</h5>
+                                    <p>台北智慧城市辦公室</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>李震宇</h5>
+                            <p class="">台北智慧城市辦公室</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/18.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>秦偉翔</h5>
+                                    <p>台北智慧城市辦公室</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>秦偉翔</h5>
+                            <p class="">台北智慧城市辦公室</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/19.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>黃淳儀</h5>
+                                    <p>台北智慧城市辦公室</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>黃淳儀</h5>
+                            <p class="">台北智慧城市辦公室</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="/img/team/20.png" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>張旭佑</h5>
+                                    <p>台北智慧城市辦公室</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h5>張旭佑</h5>
+                            <p class="">台北智慧城市辦公室</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="item">
                     <div class="team-item nf-col-padding">
                         <div class="team-item-img">
@@ -723,23 +798,6 @@
                         <div class="team-item-info">
                             <h5>鄭惠如</h5>
                             <p class="">食藝集團創辦人</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-item nf-col-padding">
-                        <div class="team-item-img">
-                            <img src="/img/team/29.png" alt="" />
-                            <div class="team-item-detail">
-                                <div class="team-item-detail-inner light-color">
-                                    <h5>連庭凱</h5>
-                                    <p>亞太B型企業協會副理事長</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-info">
-                            <h5>連庭凱</h5>
-                            <p class="">亞太B型企業協會副理事長</p>
                         </div>
                     </div>
                 </div>
