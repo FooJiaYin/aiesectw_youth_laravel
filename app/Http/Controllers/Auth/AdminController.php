@@ -65,7 +65,7 @@ class AdminController extends Controller
             $visitorsPercentage = $lastWeekVisitors == 0 ? 100 : $thisWeekVisitors / $lastWeekVisitors * 100;
 
             $soldEventAnalytics = $this->AnalyticsService->fetchMonthClickSoldButtonEvent();
-            $soldClickEvent = count($soldEventAnalytics) ? $soldEventAnalytics->first()->totalEvent : 0 ;
+            $soldClickEvent = count($soldEventAnalytics) ? $soldEventAnalytics->first()['totalEvent'] : 0 ;
 
             foreach($lastWeekAnalytics as $lastWeekData){
                 $push_array = [
