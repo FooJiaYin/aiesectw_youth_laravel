@@ -123,7 +123,6 @@ class AdminController extends Controller
 
         } catch (Exception $exception) {
             Log::info($exception);
-            dd($exception);
             abort(404);
         }
     }
