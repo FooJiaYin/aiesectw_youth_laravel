@@ -106,11 +106,14 @@
                                 <div class="col-md-2">
                                     <select id="status" name="status" class="form-control">
                                         @for($i=1;$i<=4;$i++)
-                                            @if(!isset($status_only_once) && ($i == old('status') || ( !old('status') && isset($press) && $i == $press->status)))
-                                                <option value="{{ $i }}" selected="selected">{{ trans('press.mode_'.$i) }}</option>
-                                                <?php $status_only_once = 1 ?>
-                                            @else
-                                                <option value="{{ $i }}">{{ trans('press.mode_'.$i) }}</option>
+                                            {{-- 排程尚未開啟 --}}
+                                            @if($i != 2)
+                                                @if(!isset($status_only_once) && ($i == old('status') || ( !old('status') && isset($press) && $i == $press->status)))
+                                                    <option value="{{ $i }}" selected="selected">{{ trans('press.mode_'.$i) }}</option>
+                                                    <?php $status_only_once = 1 ?>
+                                                @else
+                                                    <option value="{{ $i }}">{{ trans('press.mode_'.$i) }}</option>
+                                                @endif
                                             @endif
                                         @endfor
                                     </select>
